@@ -1,0 +1,321 @@
+:root {
+  --clore1: #ffffff;
+  --clore2: #949494;
+  --clore3: #4e4e4e;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url(./assets/fonts/Inter-Regular.ttf);
+}
+
+* {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: none;
+  text-decoration: none;
+}
+
+button {
+  cursor: none;
+}
+
+body {
+  background: rgb(37, 37, 37);
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+  padding: 20px 34px;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  color: red;
+}
+
+nav li {
+  text-align: center;
+  border-radius: 100px;
+  margin: 0 60px;
+  padding: 5px;
+}
+
+#navbar {
+  font-size: 1.5rem;
+  color: white;
+  display: none;
+}
+
+#navbar:active {
+  color: salmon;
+}
+
+h2 {
+  color: var(--clore1);
+  padding: 0 15px;
+  width: 50%;
+  display: contents;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+h2:active {
+  color: salmon;
+}
+
+@media screen and (max-width: 650px) {
+  #navbar {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  .header-left,
+  .header-right {
+    padding-top: 10%;
+  }
+}
+
+header {
+  display: flex;
+
+  height: 400px;
+}
+
+.header-left {
+  text-align: left;
+  width: 50%;
+}
+
+.header-left-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 30px;
+}
+.header-left-container h1 {
+  color: var(--clore1);
+  font-size: 4rem;
+}
+.header-left-container h3 {
+  color: var(--clore3);
+  font-size: 1.4rem;
+}
+.header-left-container p {
+  color: var(--clore2);
+  font-size: 0.8rem;
+}
+
+.header-right {
+  width: 50%;
+  max-width: 400px;
+  display: block;
+  margin: auto;
+}
+
+#modem {
+  width: 100%;
+}
+
+.Infos {
+  color: var(--clore1);
+  display: grid;
+  grid-template-columns: 30% 70%;
+  justify-content: space-between;
+  padding: 10px;
+  background: black;
+}
+
+.Infos-left {
+  text-align: left;
+  padding-left: 35px;
+}
+
+.btn-container {
+  display: grid;
+  justify-items: left;
+  align-items: left;
+}
+.btn-container button {
+  background: var(--clore3);
+  border: none;
+  color: var(--clore1);
+  padding: 10px;
+  width: 135px;
+  margin: 5px;
+  border-radius: 5px;
+
+  transition: 0.5s;
+  user-select: none;
+}
+
+.investors {
+  height: 100px;
+  display: grid;
+  align-content: space-evenly;
+}
+.img-investors {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-items: center;
+  max-height: 100px;
+}
+
+.img-investors img {
+  max-width: 250px;
+  width: 100%;
+  padding: 10% 20% 0;
+}
+
+/* ********Média Quirie********* */
+
+@media screen and (max-width: 900px) {
+  .header-left-container h1 {
+    font-size: 3.5rem;
+  }
+  .header-left-container h3 {
+    font-size: 1.2rem;
+  }
+  .header-left-container p {
+    font-size: 0.8rem;
+  }
+}
+h3 {
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 730px) {
+  .Infos-left {
+    padding-left: 25px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .Infos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .Infos-left {
+    padding-left: 0;
+    margin: 20px 0 30px;
+  }
+  .Infos-left h3 {
+    margin-bottom: 10px;
+  }
+  .Infos h3 {
+    text-align: center;
+  }
+  .img-investors img {
+    max-width: 150px;
+    width: 100%;
+    padding: 10% 20% 0;
+  }
+  #modem {
+    padding-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .header-left-container h1 {
+    font-size: 3rem;
+  }
+
+  #modem {
+    padding-bottom: 80px;
+  }
+}
+@media screen and (max-width: 530px) {
+  .header-left-container h1 {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 430px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+  }
+
+  .header-left {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .header-left-container h1 {
+    font-size: 2rem;
+  }
+}
+
+#mouse1 {
+  position: absolute;
+  border-radius: 100px;
+  height: 150px;
+  width: 150px;
+  z-index: 100;
+  background: rgb(54, 54, 54);
+  mix-blend-mode: difference;
+  transform: translate(-50%, -50%);
+  transition: 0.3s;
+}
+#mouse2 {
+  position: absolute;
+  border-radius: 100px;
+  height: 70px;
+  width: 70px;
+  z-index: 110;
+  background: rgb(254, 254, 254);
+  mix-blend-mode: difference;
+  transform: translate(-50%, -50%);
+  transition: 0.2s;
+}
+#mouse3 {
+  position: absolute;
+  border-radius: 100px;
+  height: 15px;
+  width: 15px;
+  mix-blend-mode: difference;
+  background: linear-gradient(to left, #f90101 0%, #000dff 100%);
+  transform: translate(-50%, -50%);
+}
+
+a,
+button {
+  z-index: 1000;
+  position: relative;
+}
+a,
+a:visited {
+  color: white;
+}
+a:hover {
+  color: rgb(255, 0, 0);
+}
+a:active {
+  color: white;
+  scale: 1.3;
+}
+button:hover {
+  color: red;
+  scale: 1.3;
+}
+button:active {
+  color: rgb(255, 255, 255);
+  scale: 1.1;
+}
